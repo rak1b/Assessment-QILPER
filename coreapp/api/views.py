@@ -53,10 +53,8 @@ class LoginView(APIView):
                     'last_name': user.last_name,
                     'image': user.get_image_url,
                     'gender': user.gender,
-                    'wallet': user.wallet,
                     'is_approved': user.is_approved,
                     'is_verified': user.is_verified,
-                    'client_id': user.get_client_id
                 }
                 # if user.is_verified:
                 token, created = auth_utils.regenerate_token(user=user)
